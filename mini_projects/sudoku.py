@@ -1,14 +1,6 @@
 """
-9x9 map DONE
-1 difficulty DONE
-def wrong step DONE
-def win DONE CHECKED
 type error (suitable_step)
 clear terminal
-playable
-empty space check DONE
-outpot/print looks normal DONE
-player given numbers -1!!!!!!!!!!!!!!!!! DONE
 """
 import numpy as np
 import os
@@ -172,6 +164,7 @@ def game() -> None:
         
         #ask in the values
         given_number = input("Adjon meg egy számot vagy az x karaktert az üres mezőhöz! ")
+        #TODO type
         player_given_place = str(input("Adja meg elősször a sor, majd az oszlop számát, egy vesszővel elválasztva! "))
         given_place = [int(player_given_place[0]) - 1, int(player_given_place[-1]) - 1]
         
