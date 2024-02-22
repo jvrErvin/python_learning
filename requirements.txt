@@ -8,6 +8,8 @@ anyio==4.2.0
     # via
     #   httpx
     #   jupyter-server
+appnope==0.1.4
+    # via ipykernel
 argon2-cffi==23.1.0
     # via jupyter-server
 argon2-cffi-bindings==21.2.0
@@ -37,8 +39,6 @@ cffi==1.16.0
     # via argon2-cffi-bindings
 charset-normalizer==3.3.2
     # via requests
-colorama==0.4.6
-    # via ipython
 comm==0.2.1
     # via
     #   ipykernel
@@ -200,6 +200,7 @@ numpy==1.26.4
     #   contourpy
     #   matplotlib
     #   pandas
+    #   pyarrow
     #   scikit-learn
     #   scipy
 overrides==7.7.0
@@ -220,6 +221,8 @@ pandocfilters==1.5.1
     # via nbconvert
 parso==0.8.3
     # via jedi
+pexpect==4.9.0
+    # via ipython
 pillow==10.2.0
     # via matplotlib
 platformdirs==4.2.0
@@ -232,8 +235,14 @@ prompt-toolkit==3.0.43
     #   jupyter-console
 psutil==5.9.8
     # via ipykernel
+ptyprocess==0.7.0
+    # via
+    #   pexpect
+    #   terminado
 pure-eval==0.2.2
     # via stack-data
+pyarrow==15.0.0
+    # via -r requirements.in
 pycparser==2.21
     # via cffi
 pygments==2.17.2
@@ -254,13 +263,6 @@ python-json-logger==2.0.7
     # via jupyter-events
 pytz==2024.1
     # via pandas
-pywin32==306
-    # via jupyter-core
-pywinpty==2.0.12
-    # via
-    #   jupyter-server
-    #   jupyter-server-terminals
-    #   terminado
 pyyaml==6.0.1
     # via jupyter-events
 pyzmq==25.1.2
