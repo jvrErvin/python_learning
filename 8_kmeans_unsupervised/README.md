@@ -1,0 +1,2 @@
+- https://en.wikipedia.org/wiki/K-means_clustering
+- https://vas3k.com/blog/machine_learning/
