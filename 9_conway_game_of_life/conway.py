@@ -1,8 +1,26 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import random as rand
 
 # TODO: implement the glider gun grid
-def glider_gun_grid() -> np.ndarray:
+def glider_gun_grid(N: int, states: list[int]) -> np.ndarray:
+    """
+    Generate glider gun grid
+    """
+    """
+    ........................O
+    ......................O.O
+    ............OO......OO............OO
+    ...........O...O....OO............OO
+    OO........O.....O...OO
+    OO........O...O.OO....O.O
+    ..........O.....O.......O
+    ...........O...O
+    ............OO
+    """
+    dead_grip = np.ndarray()
+    dead_grip.resize(N*N)
+    dead_grip.fill(states[1])
     pass
 
 def random_grid(N: int, states: list[int], p: list[float]) -> np.ndarray:
@@ -29,11 +47,28 @@ def set_boundary(grid: np.ndarray, boundary_condition: str, N: int, states: list
             grid[i][0]   = alive
             grid[i][N+1] = alive
     elif boundary_condition == "periodic":
-        pass
-        # TODO: implement periodic boundary condition
+        grid[0][i]   = grid[-2][i]
+        grid[N+1][i] = grid[1][i]
+        grid[i][0]   = grid[i][-2]
+        grid[i][N+1] = dead[i][1]
     elif boundary_condition == "random":
-        pass
-        # TODO: implement random boundary condition
+        for i in range(0, N+2):
+            if rand.randint(1,2) % 2:
+                grid[0][i]   = dead
+            else:
+                grid[0][i]   = alive
+            if rand.randint(1,2) % 2:
+                grid[N+1][i]   = dead
+            else:
+                grid[N+1][i]   = alive
+            if rand.randint(1,2) % 2:
+                grid[i][0]   = dead
+            else:
+                grid[i][0]   = alive
+            if rand.randint(1,2) % 2:
+                grid[i][N+1]   = dead
+            else:
+                grid[i][N+1]   = alive
     return grid
 
 def count_alive_neighbors(grid: np.ndarray, i: int, j: int) -> int:
