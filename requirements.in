@@ -6,3 +6,5 @@ ipywidgets
 ipykernel
 jupyter
 Pyarrow
+imageio
+pathlib

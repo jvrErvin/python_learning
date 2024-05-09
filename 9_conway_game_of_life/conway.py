@@ -207,8 +207,8 @@ if __name__ == "__main__":
 
     N = 60  # Size of the grid
     n = 2  # Number of neighbors for a cell to be alive/dead in the next generation
-    boundary_condition = "random"  # "dead" or "periodic" or "alive" or "random"
-    T = 200  # Number of timesteps to simulate
+    boundary_condition = "dead"  # "dead" or "periodic" or "alive" or "random"
+    T = 301  # Number of timesteps to simulate
     t = 0  # Initial time
     p_alive_dead_sampling = [0.5, 0.5]  # Sampling probabilities for alive and dead cells
     initial_state = "glidergun"  # "random" or "glidergun"
@@ -251,3 +251,6 @@ if __name__ == "__main__":
         grid = set_boundary(grid, boundary_condition, N, states)
 
     create_gif_from_plots(output_folder=output_folder, gif_name="simulation.gif", fps=1)
+    
+    
+    #NOTE: alive and dead states are transposed
