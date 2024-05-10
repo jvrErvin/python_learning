@@ -252,5 +252,3 @@ if __name__ == "__main__":
 
     create_gif_from_plots(output_folder=output_folder, gif_name="simulation.gif", fps=1)
     
-    
-    #NOTE: alive and dead states are transposed
