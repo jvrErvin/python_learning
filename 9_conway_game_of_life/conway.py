@@ -213,7 +213,7 @@ if __name__ == "__main__":
     p_alive_dead_sampling = [0.5, 0.5]  # Sampling probabilities for alive and dead cells
     initial_state = "glidergun"  # "random" or "glidergun"
 
-    output_folder = Path("./simulation_output")
+    output_folder = Path("./9_simulation_output")
     output_folder.mkdir(exist_ok=True, parents=True)
 
     if initial_state == "random":

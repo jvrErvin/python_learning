@@ -8,6 +8,8 @@ anyio==4.2.0
     # via
     #   httpx
     #   jupyter-server
+appnope==0.1.4
+    # via ipykernel
 argon2-cffi==23.1.0
     # via jupyter-server
 argon2-cffi-bindings==21.2.0
@@ -37,8 +39,6 @@ cffi==1.16.0
     # via argon2-cffi-bindings
 charset-normalizer==3.3.2
     # via requests
-colorama==0.4.6
-    # via ipython
 comm==0.2.1
     # via
     #   ipykernel
@@ -224,8 +224,8 @@ pandocfilters==1.5.1
     # via nbconvert
 parso==0.8.3
     # via jedi
-pathlib==1.0.1
-    # via -r requirements.in
+pexpect==4.9.0
+    # via ipython
 pillow==10.2.0
     # via
     #   imageio
@@ -240,6 +240,10 @@ prompt-toolkit==3.0.43
     #   jupyter-console
 psutil==5.9.8
     # via ipykernel
+ptyprocess==0.7.0
+    # via
+    #   pexpect
+    #   terminado
 pure-eval==0.2.2
     # via stack-data
 pyarrow==15.0.0
@@ -254,6 +258,12 @@ pygments==2.17.2
     #   qtconsole
 pyparsing==3.1.1
     # via matplotlib
+pyqt5==5.15.10
+    # via -r requirements.in
+pyqt5-qt5==5.15.13
+    # via pyqt5
+pyqt5-sip==12.13.0
+    # via pyqt5
 python-dateutil==2.8.2
     # via
     #   arrow
@@ -264,13 +274,6 @@ python-json-logger==2.0.7
     # via jupyter-events
 pytz==2024.1
     # via pandas
-pywin32==306
-    # via jupyter-core
-pywinpty==2.0.13
-    # via
-    #   jupyter-server
-    #   jupyter-server-terminals
-    #   terminado
 pyyaml==6.0.1
     # via jupyter-events
 pyzmq==25.1.2
