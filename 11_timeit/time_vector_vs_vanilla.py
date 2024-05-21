@@ -141,11 +141,14 @@ for size in tqdm(sizes):
 # Plotting the results
 fig, axes = plt.subplots(9, 1, figsize=(14, 48))
 
+log_scale = True
+
 # Plot for Initialization with Zeros
 axes[0].plot(sizes, results['list_zeros'], label='List Zeros', marker='o')
 axes[0].plot(sizes, results['numpy_zeros'], label='NumPy Zeros', marker='o')
-axes[0].set_xscale('log')
-axes[0].set_yscale('log')
+if log_scale:
+    axes[0].set_xscale('log')
+    axes[0].set_yscale('log')
 axes[0].set_xlabel('Size')
 axes[0].set_ylabel('Time (s)')
 axes[0].set_title('Initialization with Zeros')
@@ -155,8 +158,9 @@ axes[0].grid(True, which="both", ls="--")
 # Plot for Addition
 axes[1].plot(sizes, results['list_addition'], label='List Addition', marker='o')
 axes[1].plot(sizes, results['numpy_addition'], label='NumPy Addition', marker='o')
-axes[1].set_xscale('log')
-axes[1].set_yscale('log')
+if log_scale:
+    axes[1].set_xscale('log')
+    axes[1].set_yscale('log')
 axes[1].set_xlabel('Size')
 axes[1].set_ylabel('Time (s)')
 axes[1].set_title('Addition')
@@ -166,8 +170,9 @@ axes[1].grid(True, which="both", ls="--")
 # Plot for Multiplication
 axes[2].plot(sizes, results['list_multiplication'], label='List Multiplication', marker='o')
 axes[2].plot(sizes, results['numpy_multiplication'], label='NumPy Multiplication', marker='o')
-axes[2].set_xscale('log')
-axes[2].set_yscale('log')
+if log_scale:
+    axes[2].set_xscale('log')
+    axes[2].set_yscale('log')
 axes[2].set_xlabel('Size')
 axes[2].set_ylabel('Time (s)')
 axes[2].set_title('Multiplication')
@@ -177,8 +182,9 @@ axes[2].grid(True, which="both", ls="--")
 # Plot for Power
 axes[3].plot(sizes, results['list_power'], label='List Power', marker='o')
 axes[3].plot(sizes, results['numpy_power'], label='NumPy Power', marker='o')
-axes[3].set_xscale('log')
-axes[3].set_yscale('log')
+if log_scale:
+    axes[3].set_xscale('log')
+    axes[3].set_yscale('log')
 axes[3].set_xlabel('Size')
 axes[3].set_ylabel('Time (s)')
 axes[3].set_title('Power')
@@ -188,8 +194,9 @@ axes[3].grid(True, which="both", ls="--")
 # Plot for Dot Product
 axes[4].plot(sizes, results['list_dot_product'], label='List Dot Product', marker='o')
 axes[4].plot(sizes, results['numpy_dot_product'], label='NumPy Dot Product', marker='o')
-axes[4].set_xscale('log')
-axes[4].set_yscale('log')
+if log_scale:
+    axes[4].set_xscale('log')
+    axes[4].set_yscale('log')
 axes[4].set_xlabel('Size')
 axes[4].set_ylabel('Time (s)')
 axes[4].set_title('Dot Product')
@@ -199,8 +206,9 @@ axes[4].grid(True, which="both", ls="--")
 # Plot for Sum
 axes[5].plot(sizes, results['list_sum'], label='List Sum', marker='o')
 axes[5].plot(sizes, results['numpy_sum'], label='NumPy Sum', marker='o')
-axes[5].set_xscale('log')
-axes[5].set_yscale('log')
+if log_scale:
+    axes[5].set_xscale('log')
+    axes[5].set_yscale('log')
 axes[5].set_xlabel('Size')
 axes[5].set_ylabel('Time (s)')
 axes[5].set_title('Sum')
@@ -210,8 +218,9 @@ axes[5].grid(True, which="both", ls="--")
 # Plot for Square Root
 axes[6].plot(sizes, results['list_sqrt'], label='List Square Root', marker='o')
 axes[6].plot(sizes, results['numpy_sqrt'], label='NumPy Square Root', marker='o')
-axes[6].set_xscale('log')
-axes[6].set_yscale('log')
+if log_scale:
+    axes[6].set_xscale('log')
+    axes[6].set_yscale('log')
 axes[6].set_xlabel('Size')
 axes[6].set_ylabel('Time (s)')
 axes[6].set_title('Square Root')
@@ -221,8 +230,9 @@ axes[6].grid(True, which="both", ls="--")
 # Plot for Mean
 axes[7].plot(sizes, results['list_mean'], label='List Mean', marker='o')
 axes[7].plot(sizes, results['numpy_mean'], label='NumPy Mean', marker='o')
-axes[7].set_xscale('log')
-axes[7].set_yscale('log')
+if log_scale:
+    axes[7].set_xscale('log')
+    axes[7].set_yscale('log')
 axes[7].set_xlabel('Size')
 axes[7].set_ylabel('Time (s)')
 axes[7].set_title('Mean')
@@ -232,8 +242,9 @@ axes[7].grid(True, which="both", ls="--")
 # Plot for Standard Deviation
 axes[8].plot(sizes, results['list_std'], label='List Standard Deviation', marker='o')
 axes[8].plot(sizes, results['numpy_std'], label='NumPy Standard Deviation', marker='o')
-axes[8].set_xscale('log')
-axes[8].set_yscale('log')
+if log_scale:
+    axes[8].set_xscale('log')
+    axes[8].set_yscale('log')
 axes[8].set_xlabel('Size')
 axes[8].set_ylabel('Time (s)')
 axes[8].set_title('Standard Deviation')
@@ -242,4 +253,5 @@ axes[8].grid(True, which="both", ls="--")
 
 # Save the plot to a file
 fig.tight_layout()
-fig.savefig('11_timeit/comparison_plots.png')
+fig_name = f'11_timeit/comparison_plots_with_logscales.png' if log_scale else f'11_timeit/comparison_plots_without_logscales.png'
+fig.savefig(fig_name)
