@@ -8,3 +8,4 @@ jupyter
 Pyarrow
 imageio
 PyQt5
+tqdm
