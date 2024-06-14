@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements.in
 #
-anyio==4.2.0
+anyio==4.4.0
     # via
     #   httpx
     #   jupyter-server
@@ -24,13 +24,13 @@ attrs==23.2.0
     # via
     #   jsonschema
     #   referencing
-babel==2.14.0
+babel==2.15.0
     # via jupyterlab-server
 beautifulsoup4==4.12.3
     # via nbconvert
 bleach==6.1.0
     # via nbconvert
-certifi==2024.2.2
+certifi==2024.6.2
     # via
     #   httpcore
     #   httpx
@@ -39,11 +39,11 @@ cffi==1.16.0
     # via argon2-cffi-bindings
 charset-normalizer==3.3.2
     # via requests
-comm==0.2.1
+comm==0.2.2
     # via
     #   ipykernel
     #   ipywidgets
-contourpy==1.2.0
+contourpy==1.2.1
     # via matplotlib
 cycler==0.12.1
     # via matplotlib
@@ -53,7 +53,7 @@ decorator==5.1.1
     # via ipython
 defusedxml==0.7.1
     # via nbconvert
-exceptiongroup==1.2.0
+exceptiongroup==1.2.1
     # via
     #   anyio
     #   ipython
@@ -61,17 +61,17 @@ executing==2.0.1
     # via stack-data
 fastjsonschema==2.19.1
     # via nbformat
-fonttools==4.49.0
+fonttools==4.53.0
     # via matplotlib
 fqdn==1.5.1
     # via jsonschema
 h11==0.14.0
     # via httpcore
-httpcore==1.0.3
+httpcore==1.0.5
     # via httpx
-httpx==0.26.0
+httpx==0.27.0
     # via jupyterlab
-idna==3.6
+idna==3.7
     # via
     #   anyio
     #   httpx
@@ -79,19 +79,19 @@ idna==3.6
     #   requests
 imageio==2.34.1
     # via -r requirements.in
-ipykernel==6.29.2
+ipykernel==6.29.4
     # via
     #   -r requirements.in
     #   jupyter
     #   jupyter-console
     #   jupyterlab
     #   qtconsole
-ipython==8.21.0
+ipython==8.25.0
     # via
     #   ipykernel
     #   ipywidgets
     #   jupyter-console
-ipywidgets==8.1.2
+ipywidgets==8.1.3
     # via
     #   -r requirements.in
     #   jupyter
@@ -99,19 +99,19 @@ isoduration==20.11.0
     # via jsonschema
 jedi==0.19.1
     # via ipython
-jinja2==3.1.3
+jinja2==3.1.4
     # via
     #   jupyter-server
     #   jupyterlab
     #   jupyterlab-server
     #   nbconvert
-joblib==1.3.2
+joblib==1.4.2
     # via scikit-learn
-json5==0.9.14
+json5==0.9.25
     # via jupyterlab-server
-jsonpointer==2.4
+jsonpointer==3.0.0
     # via jsonschema
-jsonschema[format-nongpl]==4.21.1
+jsonschema[format-nongpl]==4.22.0
     # via
     #   jupyter-events
     #   jupyterlab-server
@@ -120,7 +120,7 @@ jsonschema-specifications==2023.12.1
     # via jsonschema
 jupyter==1.0.0
     # via -r requirements.in
-jupyter-client==8.6.0
+jupyter-client==8.6.2
     # via
     #   ipykernel
     #   jupyter-console
@@ -129,7 +129,7 @@ jupyter-client==8.6.0
     #   qtconsole
 jupyter-console==6.6.3
     # via jupyter
-jupyter-core==5.7.1
+jupyter-core==5.7.2
     # via
     #   ipykernel
     #   jupyter-client
@@ -140,28 +140,28 @@ jupyter-core==5.7.1
     #   nbconvert
     #   nbformat
     #   qtconsole
-jupyter-events==0.9.0
+jupyter-events==0.10.0
     # via jupyter-server
-jupyter-lsp==2.2.2
+jupyter-lsp==2.2.5
     # via jupyterlab
-jupyter-server==2.12.5
+jupyter-server==2.14.1
     # via
     #   jupyter-lsp
     #   jupyterlab
     #   jupyterlab-server
     #   notebook
     #   notebook-shim
-jupyter-server-terminals==0.5.2
+jupyter-server-terminals==0.5.3
     # via jupyter-server
-jupyterlab==4.1.1
+jupyterlab==4.2.2
     # via notebook
 jupyterlab-pygments==0.3.0
     # via nbconvert
-jupyterlab-server==2.25.3
+jupyterlab-server==2.27.2
     # via
     #   jupyterlab
     #   notebook
-jupyterlab-widgets==3.0.10
+jupyterlab-widgets==3.0.11
     # via ipywidgets
 kiwisolver==1.4.5
     # via matplotlib
@@ -169,28 +169,30 @@ markupsafe==2.1.5
     # via
     #   jinja2
     #   nbconvert
-matplotlib==3.8.3
-    # via -r requirements.in
-matplotlib-inline==0.1.6
+matplotlib==3.9.0
+    # via
+    #   -r requirements.in
+    #   seaborn
+matplotlib-inline==0.1.7
     # via
     #   ipykernel
     #   ipython
 mistune==3.0.2
     # via nbconvert
-nbclient==0.9.0
+nbclient==0.10.0
     # via nbconvert
-nbconvert==7.16.0
+nbconvert==7.16.4
     # via
     #   jupyter
     #   jupyter-server
-nbformat==5.9.2
+nbformat==5.10.4
     # via
     #   jupyter-server
     #   nbclient
     #   nbconvert
 nest-asyncio==1.6.0
     # via ipykernel
-notebook==7.1.0
+notebook==7.2.1
     # via jupyter
 notebook-shim==0.2.4
     # via
@@ -206,9 +208,10 @@ numpy==1.26.4
     #   pyarrow
     #   scikit-learn
     #   scipy
+    #   seaborn
 overrides==7.7.0
     # via jupyter-server
-packaging==23.2
+packaging==24.1
     # via
     #   ipykernel
     #   jupyter-server
@@ -218,23 +221,25 @@ packaging==23.2
     #   nbconvert
     #   qtconsole
     #   qtpy
-pandas==2.2.0
-    # via -r requirements.in
+pandas==2.2.2
+    # via
+    #   -r requirements.in
+    #   seaborn
 pandocfilters==1.5.1
     # via nbconvert
-parso==0.8.3
+parso==0.8.4
     # via jedi
 pexpect==4.9.0
     # via ipython
-pillow==10.2.0
+pillow==10.3.0
     # via
     #   imageio
     #   matplotlib
-platformdirs==4.2.0
+platformdirs==4.2.2
     # via jupyter-core
 prometheus-client==0.20.0
     # via jupyter-server
-prompt-toolkit==3.0.43
+prompt-toolkit==3.0.47
     # via
     #   ipython
     #   jupyter-console
@@ -246,25 +251,25 @@ ptyprocess==0.7.0
     #   terminado
 pure-eval==0.2.2
     # via stack-data
-pyarrow==15.0.0
+pyarrow==16.1.0
     # via -r requirements.in
-pycparser==2.21
+pycparser==2.22
     # via cffi
-pygments==2.17.2
+pygments==2.18.0
     # via
     #   ipython
     #   jupyter-console
     #   nbconvert
     #   qtconsole
-pyparsing==3.1.1
+pyparsing==3.1.2
     # via matplotlib
 pyqt5==5.15.10
     # via -r requirements.in
-pyqt5-qt5==5.15.13
+pyqt5-qt5==5.15.14
     # via pyqt5
 pyqt5-sip==12.13.0
     # via pyqt5
-python-dateutil==2.8.2
+python-dateutil==2.9.0.post0
     # via
     #   arrow
     #   jupyter-client
@@ -276,23 +281,23 @@ pytz==2024.1
     # via pandas
 pyyaml==6.0.1
     # via jupyter-events
-pyzmq==25.1.2
+pyzmq==26.0.3
     # via
     #   ipykernel
     #   jupyter-client
     #   jupyter-console
     #   jupyter-server
     #   qtconsole
-qtconsole==5.5.1
+qtconsole==5.5.2
     # via jupyter
 qtpy==2.4.1
     # via qtconsole
-referencing==0.33.0
+referencing==0.35.1
     # via
     #   jsonschema
     #   jsonschema-specifications
     #   jupyter-events
-requests==2.31.0
+requests==2.32.3
     # via jupyterlab-server
 rfc3339-validator==0.1.4
     # via
@@ -302,15 +307,17 @@ rfc3986-validator==0.1.1
     # via
     #   jsonschema
     #   jupyter-events
-rpds-py==0.18.0
+rpds-py==0.18.1
     # via
     #   jsonschema
     #   referencing
-scikit-learn==1.4.1.post1
+scikit-learn==1.5.0
     # via -r requirements.in
-scipy==1.12.0
+scipy==1.13.1
     # via scikit-learn
-send2trash==1.8.2
+seaborn==0.13.2
+    # via -r requirements.in
+send2trash==1.8.3
     # via jupyter-server
 six==1.16.0
     # via
@@ -318,7 +325,7 @@ six==1.16.0
     #   bleach
     #   python-dateutil
     #   rfc3339-validator
-sniffio==1.3.0
+sniffio==1.3.1
     # via
     #   anyio
     #   httpx
@@ -326,17 +333,17 @@ soupsieve==2.5
     # via beautifulsoup4
 stack-data==0.6.3
     # via ipython
-terminado==0.18.0
+terminado==0.18.1
     # via
     #   jupyter-server
     #   jupyter-server-terminals
-threadpoolctl==3.3.0
+threadpoolctl==3.5.0
     # via scikit-learn
-tinycss2==1.2.1
+tinycss2==1.3.0
     # via nbconvert
 tomli==2.0.1
     # via jupyterlab
-tornado==6.4
+tornado==6.4.1
     # via
     #   ipykernel
     #   jupyter-client
@@ -346,7 +353,7 @@ tornado==6.4
     #   terminado
 tqdm==4.66.4
     # via -r requirements.in
-traitlets==5.14.1
+traitlets==5.14.3
     # via
     #   comm
     #   ipykernel
@@ -363,12 +370,13 @@ traitlets==5.14.1
     #   nbconvert
     #   nbformat
     #   qtconsole
-types-python-dateutil==2.8.19.20240106
+types-python-dateutil==2.9.0.20240316
     # via arrow
-typing-extensions==4.9.0
+typing-extensions==4.12.2
     # via
     #   anyio
     #   async-lru
+    #   ipython
 tzdata==2024.1
     # via pandas
 uri-template==1.3.0
@@ -377,13 +385,16 @@ urllib3==2.2.1
     # via requests
 wcwidth==0.2.13
     # via prompt-toolkit
-webcolors==1.13
+webcolors==24.6.0
     # via jsonschema
 webencodings==0.5.1
     # via
     #   bleach
     #   tinycss2
-websocket-client==1.7.0
+websocket-client==1.8.0
     # via jupyter-server
-widgetsnbextension==4.0.10
+widgetsnbextension==4.0.11
     # via ipywidgets
+
+# The following packages are considered to be unsafe in a requirements file:
+# setuptools
