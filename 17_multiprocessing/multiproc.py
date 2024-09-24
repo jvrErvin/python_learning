@@ -2,8 +2,8 @@ import argparse
 import time
 from multiprocessing import Process, Queue
 
-from tqdm import tqdm
 
+from tqdm import tqdm
 
 def parse_arguments() -> argparse.Namespace:
     """
