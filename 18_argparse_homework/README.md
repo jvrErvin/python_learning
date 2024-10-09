@@ -23,16 +23,16 @@ Write a Python script that simulates a basic calculator. The script should accep
 
 ```bash
 # Addition (default operation)
-python calculator.py 5 3
+python 18_argparse_homework\\calculator.py 5 3
 
 # Subtraction
-python calculator.py 5 3 --operation subtract
+python 18_argparse_homework\\calculator.py 5 3 --operation subtract
 
 # Multiplication
-python calculator.py 5 3 --operation multiply
+python 18_argparse_homework\\calculator.py 5 3 --operation multiply
 
 # Division
-python calculator.py 5 3 --operation divide
+python 18_argparse_homework\\calculator.py 5 3 --operation divide
 ```
 
 Expected outputs:
