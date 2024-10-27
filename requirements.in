@@ -1,4 +1,5 @@
-numpy
+wheel
+numpy<2
 pandas
 matplotlib
 scikit-learn
@@ -10,3 +11,7 @@ imageio
 PyQt5
 tqdm
 seaborn
+torch
+torchvision
+isort
+black
